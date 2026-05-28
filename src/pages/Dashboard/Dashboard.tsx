@@ -73,7 +73,6 @@ export function Dashboard() {
     price: Number(product.price),
   }));
 
-  // MÉTRICAS POR CATEGORIA
   const categoriesMap: Record<string, number> = {};
 
   products.forEach((product) => {
@@ -179,7 +178,7 @@ export function Dashboard() {
 
         {/* GRÁFICOS */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* GRÁFICO PRODUTOS */}
+          {/* GRÁFICO DE BARRAS */}
           <div className="bg-zinc-900 p-6 rounded-2xl border border-zinc-800">
             <h3 className="text-2xl font-bold mb-6">
               Produtos e preços
@@ -203,7 +202,7 @@ export function Dashboard() {
             </div>
           </div>
 
-          {/* GRÁFICO CATEGORIAS */}
+          {/* GRÁFICO DE PIZZA */}
           <div className="bg-zinc-900 p-6 rounded-2xl border border-zinc-800">
             <h3 className="text-2xl font-bold mb-6">
               Produtos por categoria
@@ -222,18 +221,16 @@ export function Dashboard() {
                     outerRadius={120}
                     label
                   >
-                    {categoryData.map(
-                      (entry, index) => (
-                        <Cell
-                          key={`cell-${index}`}
-                          fill={
-                            COLORS[
-                              index % COLORS.length
-                            ]
-                          }
-                        />
-                      )
-                    )}
+                    {categoryData.map((_, index) => (
+                      <Cell
+                        key={`cell-${index}`}
+                        fill={
+                          COLORS[
+                            index % COLORS.length
+                          ]
+                        }
+                      />
+                    ))}
                   </Pie>
 
                   <Tooltip />
