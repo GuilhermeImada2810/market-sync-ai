@@ -1,73 +1,173 @@
-# React + TypeScript + Vite
+````md
+# 🚀 Market Sync AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sistema inteligente de gestão de produtos, estoque e análise de vendas desenvolvido com React, TypeScript, Firebase e Vercel.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# 📌 Sobre o Projeto
 
-## React Compiler
+O **Market Sync AI** é uma plataforma moderna desenvolvida para auxiliar no gerenciamento de produtos, análise de vendas e controle de estoque de forma simples, rápida e inteligente.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O projeto foi criado com foco em:
+- performance
+- experiência do usuário
+- design moderno
+- integração com Firebase
+- dashboard inteligente
+- escalabilidade futura
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# 🖥️ Preview do Sistema
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🔐 Login com Google
+Sistema de autenticação utilizando Firebase Authentication.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📊 Dashboard Inteligente
+Painel administrativo com:
+- métricas em tempo real
+- total de produtos
+- total financeiro
+- categorias cadastradas
+- gráficos dinâmicos
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📦 Cadastro de Produtos
+CRUD completo:
+- adicionar produtos
+- editar produtos
+- excluir produtos
+- listar produtos
+
+## 🔎 Pesquisa e Filtros
+Sistema de:
+- pesquisa por nome
+- filtro por categoria
+
+## 📈 Gráficos
+Dashboard com:
+- gráfico de barras
+- gráfico de pizza
+- análise visual dos produtos
+
+## ☁️ Banco de Dados
+Integração completa com:
+- Firebase Firestore
+
+## 🌐 Deploy Online
+Projeto hospedado com:
+- Vercel
+
+---
+
+# 🛠️ Tecnologias Utilizadas
+
+## Frontend
+- React
+- TypeScript
+- Vite
+- TailwindCSS
+
+## Backend / Cloud
+- Firebase Authentication
+- Firebase Firestore
+
+## Deploy
+- Vercel
+
+## Bibliotecas
+- Recharts
+- Lucide React
+- React Icons
+- React Router DOM
+
+---
+
+# 📂 Estrutura do Projeto
+
+```bash
+src/
+ ├── components/
+ ├── context/
+ ├── pages/
+ │    ├── Dashboard/
+ │    ├── Login/
+ │    └── Products/
+ ├── routes/
+ ├── services/
+ └── styles/
+````
+
+---
+
+# 🔐 Funcionalidades Atuais
+
+✅ Login com Google
+✅ Dashboard inteligente
+✅ CRUD de produtos
+✅ Pesquisa de produtos
+✅ Filtro por categoria
+✅ Edição de produtos
+✅ Exclusão de produtos
+✅ Firebase integrado
+✅ Navegação entre páginas
+✅ Logout
+✅ Interface responsiva
+✅ Deploy online
+
+---
+
+# 🚀 Próximas Funcionalidades
+
+🔄 Controle de estoque
+📉 Alerta de estoque baixo
+🤖 IA para análise de vendas
+📦 Integração Shopee
+🛒 Integração Mercado Livre
+📊 Relatórios avançados
+📁 Exportação PDF/Excel
+🌙 Tema Dark/Light
+👥 Painel administrador
+📈 Métricas inteligentes
+💰 Margem de lucro automática
+📱 Responsividade mobile avançada
+
+---
+
+# ⚙️ Como Rodar o Projeto
+
+## Instalar dependências
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Rodar o projeto
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+npm run dev
+```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+# 🌍 Deploy
+
+Projeto publicado na Vercel.
+
+---
+
+# 👨‍💻 Desenvolvedor
+
+Desenvolvido por Guilherme Imada.
+
+GitHub:
+https://github.com/GuilhermeImada2810
+
+---
+
+# 📄 Licença
+
+Este projeto foi desenvolvido para fins educacionais, acadêmicos e profissionais.
+
+```
 ```

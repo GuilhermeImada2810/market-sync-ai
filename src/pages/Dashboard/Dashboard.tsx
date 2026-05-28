@@ -10,6 +10,7 @@ import {
   Package,
   DollarSign,
   BarChart3,
+  LogOut,
 } from "lucide-react";
 
 import {
@@ -26,6 +27,8 @@ import {
 
 import { db } from "../../services/firebase";
 
+import { useAuth } from "../../context/AuthContext";
+
 interface ProductProps {
   id: string;
   name: string;
@@ -35,6 +38,8 @@ interface ProductProps {
 
 export function Dashboard() {
   const [products, setProducts] = useState<ProductProps[]>([]);
+
+  const { logout } = useAuth();
 
   async function loadProducts() {
     const querySnapshot = await getDocs(
@@ -123,6 +128,14 @@ export function Dashboard() {
             Produtos
           </a>
         </nav>
+
+        <button
+          onClick={logout}
+          className="flex items-center gap-3 p-3 rounded-xl hover:bg-red-900 transition mt-10 text-red-400"
+        >
+          <LogOut size={20} />
+          Sair
+        </button>
       </aside>
 
       {/* CONTEÚDO */}

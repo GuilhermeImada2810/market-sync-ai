@@ -11,6 +11,8 @@ import {
 
 import { db } from "../../services/firebase";
 
+import { ArrowLeft } from "lucide-react";
+
 interface ProductProps {
   id: string;
   name: string;
@@ -131,6 +133,16 @@ export function Products() {
 
   return (
     <div className="bg-black min-h-screen text-white p-10">
+      <div className="mb-6">
+        <a
+          href="/dashboard"
+          className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 transition px-4 py-2 rounded-xl text-white font-semibold"
+        >
+          <ArrowLeft size={18} />
+          Voltar ao Dashboard
+        </a>
+      </div>
+
       <h1 className="text-4xl font-bold text-purple-500 mb-10">
         Cadastro de Produtos
       </h1>
