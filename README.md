@@ -1,85 +1,181 @@
-````md
 # 🚀 Market Sync AI
 
-Sistema inteligente de gestão de produtos, estoque e análise de vendas desenvolvido com React, TypeScript, Firebase e Vercel.
+Sistema inteligente para controle de estoque, gestão financeira e análise de lucro para e-commerce.
+
+---
+
+## 🌎 Aplicação Online
+
+Acesse o projeto:
+
+https://vercel.com/guilhermes-projects-9ac132a2/market-sync-ai
 
 ---
 
 # 📌 Sobre o Projeto
 
-O **Market Sync AI** é uma plataforma moderna desenvolvida para auxiliar no gerenciamento de produtos, análise de vendas e controle de estoque de forma simples, rápida e inteligente.
+O Market Sync AI foi desenvolvido para auxiliar vendedores de e-commerce no controle de produtos, estoque, precificação e análise financeira.
 
-O projeto foi criado com foco em:
-- performance
-- experiência do usuário
-- design moderno
-- integração com Firebase
-- dashboard inteligente
-- escalabilidade futura
+O sistema permite cadastrar produtos, controlar estoque, calcular margens de lucro, analisar custos operacionais e visualizar indicadores através de dashboards inteligentes.
+
+O projeto foi desenvolvido utilizando tecnologias modernas do mercado para oferecer uma experiência completa de gestão.
 
 ---
 
-# 🖥️ Preview do Sistema
+# 🎯 Objetivos
 
-## 🔐 Login com Google
-Sistema de autenticação utilizando Firebase Authentication.
-
-## 📊 Dashboard Inteligente
-Painel administrativo com:
-- métricas em tempo real
-- total de produtos
-- total financeiro
-- categorias cadastradas
-- gráficos dinâmicos
-
-## 📦 Cadastro de Produtos
-CRUD completo:
-- adicionar produtos
-- editar produtos
-- excluir produtos
-- listar produtos
-
-## 🔎 Pesquisa e Filtros
-Sistema de:
-- pesquisa por nome
-- filtro por categoria
-
-## 📈 Gráficos
-Dashboard com:
-- gráfico de barras
-- gráfico de pizza
-- análise visual dos produtos
-
-## ☁️ Banco de Dados
-Integração completa com:
-- Firebase Firestore
-
-## 🌐 Deploy Online
-Projeto hospedado com:
-- Vercel
+* Controle de estoque
+* Gestão financeira
+* Precificação inteligente
+* Análise de lucro
+* Dashboard de indicadores
+* Organização de produtos
+* Simulação de margens
+* Multiusuário com autenticação Google
 
 ---
 
-# 🛠️ Tecnologias Utilizadas
+# 🧠 Inteligências Utilizadas
+
+O sistema possui cálculos inteligentes para:
+
+✅ Margem Atual
+
+✅ Margem Desejada
+
+✅ Lucro Líquido
+
+✅ Cálculo Automático de Taxas
+
+✅ Cálculo de Impostos
+
+✅ Precificação Ideal de Venda
+
+✅ Análise Financeira Inteligente
+
+---
+
+# ⚙️ Tecnologias Utilizadas
 
 ## Frontend
-- React
-- TypeScript
-- Vite
-- TailwindCSS
 
-## Backend / Cloud
-- Firebase Authentication
-- Firebase Firestore
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
 
-## Deploy
-- Vercel
+## Backend
+
+* Firebase Authentication
+* Firebase Firestore
 
 ## Bibliotecas
-- Recharts
-- Lucide React
-- React Icons
-- React Router DOM
+
+* Recharts
+* Lucide React
+* XLSX
+
+---
+
+# 🔐 Autenticação
+
+O sistema utiliza:
+
+* Login com Google
+* Firebase Authentication
+* Controle Multiusuário
+* Dados isolados por usuário
+
+Cada usuário visualiza apenas seus próprios dados.
+
+---
+
+# 📦 Gestão de Produtos
+
+Funcionalidades:
+
+* Cadastro de produtos
+* Edição de produtos
+* Exclusão de produtos
+* Controle de estoque
+* Categorias
+* Pesquisa inteligente
+* Filtro por categoria
+* Exportação Excel
+
+---
+
+# 💰 Financeiro Inteligente
+
+Permite calcular:
+
+* Preço de venda
+* Custo do produto
+* Taxa do marketplace
+* Gastos com anúncios
+* Frete
+* Impostos
+* Lucro líquido
+* Margem atual
+* Margem desejada
+* Preço ideal de venda
+
+---
+
+# 📊 Dashboard Inteligente
+
+O Dashboard apresenta:
+
+* Total de produtos
+* Lucro total
+* Margem média
+* Produtos com baixa margem
+* Gráfico de lucro por produto
+* Gráfico de saúde financeira
+
+---
+
+# 🖼️ Screenshots
+
+## Dashboard Principal
+
+![Dashboard](screenshots/dashboard-home.png)
+
+---
+
+## Lucro por Produto
+
+![Lucro](screenshots/dashboard-lucro-produto.png)
+
+---
+
+## Saúde Financeira
+
+![Saude](screenshots/dashboard-saude-financeira.png)
+
+---
+
+## Gestão de Produtos
+
+![Produtos](screenshots/produtos.png)
+
+---
+
+## Cálculo Financeiro
+
+![Financeiro](screenshots/financeiro-calculo.png)
+
+---
+
+## Resultado Financeiro
+
+![Resultado](screenshots/financeiro-resultado.png)
+
+---
+
+## Produtos Financeiros Salvos
+
+![Salvos](screenshots/financeiro-produtos-salvos.png)
 
 ---
 
@@ -87,62 +183,38 @@ Projeto hospedado com:
 
 ```bash
 src/
- ├── components/
- ├── context/
- ├── pages/
- │    ├── Dashboard/
- │    ├── Login/
- │    └── Products/
- ├── routes/
- ├── services/
- └── styles/
-````
+│
+├── pages/
+│   ├── Dashboard
+│   ├── Products
+│   ├── Finance
+│
+├── routes
+│
+├── services
+│
+├── context
+│
+└── components
+```
 
 ---
 
-# 🔐 Funcionalidades Atuais
+# 🚀 Como Executar
 
-✅ Login com Google
-✅ Dashboard inteligente
-✅ CRUD de produtos
-✅ Pesquisa de produtos
-✅ Filtro por categoria
-✅ Edição de produtos
-✅ Exclusão de produtos
-✅ Firebase integrado
-✅ Navegação entre páginas
-✅ Logout
-✅ Interface responsiva
-✅ Deploy online
+Clone o projeto:
 
----
+```bash
+git clone https://github.com/GuilhermeImada2810/market-sync-ai.git
+```
 
-# 🚀 Próximas Funcionalidades
-
-🔄 Controle de estoque
-📉 Alerta de estoque baixo
-🤖 IA para análise de vendas
-📦 Integração Shopee
-🛒 Integração Mercado Livre
-📊 Relatórios avançados
-📁 Exportação PDF/Excel
-🌙 Tema Dark/Light
-👥 Painel administrador
-📈 Métricas inteligentes
-💰 Margem de lucro automática
-📱 Responsividade mobile avançada
-
----
-
-# ⚙️ Como Rodar o Projeto
-
-## Instalar dependências
+Instale as dependências:
 
 ```bash
 npm install
 ```
 
-## Rodar o projeto
+Execute:
 
 ```bash
 npm run dev
@@ -150,24 +222,31 @@ npm run dev
 
 ---
 
-# 🌍 Deploy
+# 🔥 Funcionalidades Desenvolvidas
 
-Projeto publicado na Vercel.
+* [x] Login Google
+* [x] Firebase Auth
+* [x] Firestore
+* [x] Multiusuário
+* [x] Dashboard
+* [x] Controle de Estoque
+* [x] Gestão Financeira
+* [x] Cálculo de Margem
+* [x] Cálculo de Impostos
+* [x] Cálculo de Frete
+* [x] Exportação Excel
+* [x] Gráficos
+* [x] Produtos Financeiros Salvos
+* [x] CRUD Completo
 
 ---
 
-# 👨‍💻 Desenvolvedor
+# 👨‍💻 Autor
 
-Desenvolvido por Guilherme Imada.
+### Guilherme Imada
+
+Estudante de Sistemas de Informação
 
 GitHub:
+
 https://github.com/GuilhermeImada2810
-
----
-
-# 📄 Licença
-
-Este projeto foi desenvolvido para fins educacionais, acadêmicos e profissionais.
-
-```
-```
