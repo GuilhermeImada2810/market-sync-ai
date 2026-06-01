@@ -26,9 +26,7 @@ import { useAuth } from "../../context/AuthContext";
 export function Dashboard() {
   const { user } = useAuth();
 
-  const [products, setProducts] = useState<
-    any[]
-  >([]);
+  const [products, setProducts] = useState<any[]>([]);
 
   async function loadProducts() {
     if (!user) return;
@@ -97,7 +95,6 @@ export function Dashboard() {
         (item) => Number(item.margin) >= 20
       ).length,
     },
-
     {
       name: "Margem Média",
       value: products.filter(
@@ -106,7 +103,6 @@ export function Dashboard() {
           Number(item.margin) < 20
       ).length,
     },
-
     {
       name: "Margem Ruim",
       value: products.filter(
@@ -123,10 +119,8 @@ export function Dashboard() {
 
   return (
     <div className="bg-black min-h-screen text-white p-10">
-
       {/* TOPO */}
       <div className="mb-10">
-
         <h1 className="text-5xl font-bold text-purple-500">
           Dashboard IA
         </h1>
@@ -137,7 +131,6 @@ export function Dashboard() {
 
         {user && (
           <div className="mt-4 flex items-center gap-3">
-
             <img
               src={user.photoURL}
               alt="Foto usuário"
@@ -153,15 +146,12 @@ export function Dashboard() {
                 {user.email}
               </p>
             </div>
-
           </div>
         )}
-
       </div>
 
       {/* BOTÕES */}
       <div className="flex flex-wrap gap-4 mb-10">
-
         <a
           href="/products"
           className="bg-purple-600 hover:bg-purple-700 transition px-6 py-3 rounded-xl font-bold text-white"
@@ -175,14 +165,11 @@ export function Dashboard() {
         >
           Financeiro
         </a>
-
       </div>
 
       {/* CARDS */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-
         <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
-
           <h2 className="text-zinc-400">
             Produtos
           </h2>
@@ -190,11 +177,9 @@ export function Dashboard() {
           <p className="text-4xl font-bold text-purple-400 mt-3">
             {totalProducts}
           </p>
-
         </div>
 
         <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
-
           <h2 className="text-zinc-400">
             Lucro Total
           </h2>
@@ -202,11 +187,9 @@ export function Dashboard() {
           <p className="text-4xl font-bold text-green-400 mt-3">
             R$ {totalProfit.toFixed(2)}
           </p>
-
         </div>
 
         <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
-
           <h2 className="text-zinc-400">
             Margem Média
           </h2>
@@ -214,11 +197,9 @@ export function Dashboard() {
           <p className="text-4xl font-bold text-blue-400 mt-3">
             {averageMargin}%
           </p>
-
         </div>
 
         <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
-
           <h2 className="text-zinc-400">
             Produtos Ruins
           </h2>
@@ -226,62 +207,46 @@ export function Dashboard() {
           <p className="text-4xl font-bold text-red-400 mt-3">
             {lowMarginProducts}
           </p>
-
         </div>
-
       </div>
 
       {/* GRÁFICO */}
       <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 mb-10">
-
         <h2 className="text-3xl font-bold text-purple-500 mb-8">
           Lucro por Produto
         </h2>
 
         <div className="w-full h-96">
-
           <ResponsiveContainer
             width="100%"
             height="100%"
           >
-
             <BarChart data={chartData}>
-
               <XAxis dataKey="name" />
-
               <YAxis />
-
               <Tooltip />
 
               <Bar
                 dataKey="lucro"
                 radius={[10, 10, 0, 0]}
               />
-
             </BarChart>
-
           </ResponsiveContainer>
-
         </div>
-
       </div>
 
       {/* PIZZA */}
       <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
-
         <h2 className="text-3xl font-bold text-green-500 mb-8">
           Saúde Financeira
         </h2>
 
         <div className="w-full h-96">
-
           <ResponsiveContainer
             width="100%"
             height="100%"
           >
-
             <PieChart>
-
               <Pie
                 data={pieData}
                 cx="50%"
@@ -290,32 +255,23 @@ export function Dashboard() {
                 dataKey="value"
                 label
               >
-
-                {pieData.map(
-                  (entry, index) => (
-                    <Cell
-                      key={index}
-                      fill={
-                        COLORS[
-                          index % COLORS.length
-                        ]
-                      }
-                    />
-                  )
-                )}
-
+                {pieData.map((_, index) => (
+                  <Cell
+                    key={index}
+                    fill={
+                      COLORS[
+                        index % COLORS.length
+                      ]
+                    }
+                  />
+                ))}
               </Pie>
 
               <Tooltip />
-
             </PieChart>
-
           </ResponsiveContainer>
-
         </div>
-
       </div>
-
     </div>
   );
 }
