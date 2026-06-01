@@ -8,17 +8,15 @@ Sistema inteligente para controle de estoque, gestão financeira e análise de l
 
 Acesse o projeto:
 
-https://vercel.com/guilhermes-projects-9ac132a2/market-sync-ai
+https://market-sync-ai.vercel.app
 
 ---
 
 # 📌 Sobre o Projeto
 
-O Market Sync AI foi desenvolvido para auxiliar vendedores de e-commerce no controle de produtos, estoque, precificação e análise financeira.
+O Market Sync AI é uma plataforma desenvolvida para auxiliar vendedores de e-commerce no controle de estoque, análise financeira e precificação inteligente de produtos.
 
-O sistema permite cadastrar produtos, controlar estoque, calcular margens de lucro, analisar custos operacionais e visualizar indicadores através de dashboards inteligentes.
-
-O projeto foi desenvolvido utilizando tecnologias modernas do mercado para oferecer uma experiência completa de gestão.
+O sistema permite cadastrar produtos, controlar estoque, calcular margens de lucro, analisar custos operacionais e visualizar indicadores através de dashboards interativos.
 
 ---
 
@@ -30,7 +28,6 @@ O projeto foi desenvolvido utilizando tecnologias modernas do mercado para ofere
 * Análise de lucro
 * Dashboard de indicadores
 * Organização de produtos
-* Simulação de margens
 * Multiusuário com autenticação Google
 
 ---
@@ -45,13 +42,15 @@ O sistema possui cálculos inteligentes para:
 
 ✅ Lucro Líquido
 
-✅ Cálculo Automático de Taxas
+✅ Taxas de Marketplace
 
-✅ Cálculo de Impostos
+✅ Impostos
 
-✅ Precificação Ideal de Venda
+✅ Frete
 
-✅ Análise Financeira Inteligente
+✅ Precificação Ideal
+
+✅ Análise Financeira
 
 ---
 
@@ -86,7 +85,7 @@ O sistema utiliza:
 * Controle Multiusuário
 * Dados isolados por usuário
 
-Cada usuário visualiza apenas seus próprios dados.
+Cada usuário visualiza apenas seus próprios produtos e análises financeiras.
 
 ---
 
@@ -100,8 +99,8 @@ Funcionalidades:
 * Controle de estoque
 * Categorias
 * Pesquisa inteligente
-* Filtro por categoria
-* Exportação Excel
+* Filtros
+* Exportação para Excel
 
 ---
 
@@ -109,7 +108,6 @@ Funcionalidades:
 
 Permite calcular:
 
-* Preço de venda
 * Custo do produto
 * Taxa do marketplace
 * Gastos com anúncios
@@ -119,6 +117,8 @@ Permite calcular:
 * Margem atual
 * Margem desejada
 * Preço ideal de venda
+
+Além disso, é possível salvar análises financeiras para consultas futuras.
 
 ---
 
@@ -139,43 +139,43 @@ O Dashboard apresenta:
 
 ## Dashboard Principal
 
-![Dashboard](screenshots/dashboard-home.png)
+![Dashboard Principal](./screenshots/dashboard-home.png)
 
 ---
 
 ## Lucro por Produto
 
-![Lucro](screenshots/dashboard-lucro-produto.png)
+![Lucro por Produto](./screenshots/dashboard-lucro-produto.png)
 
 ---
 
 ## Saúde Financeira
 
-![Saude](screenshots/dashboard-saude-financeira.png)
+![Saúde Financeira](./screenshots/dashboard-saude-financeira.png)
 
 ---
 
 ## Gestão de Produtos
 
-![Produtos](screenshots/produtos.png)
+![Produtos](./screenshots/produtos.png)
 
 ---
 
 ## Cálculo Financeiro
 
-![Financeiro](screenshots/financeiro-calculo.png)
+![Financeiro](./screenshots/financeiro-calculo.png)
 
 ---
 
 ## Resultado Financeiro
 
-![Resultado](screenshots/financeiro-resultado.png)
+![Resultado Financeiro](./screenshots/financeiro-resultado.png)
 
 ---
 
 ## Produtos Financeiros Salvos
 
-![Salvos](screenshots/financeiro-produtos-salvos.png)
+![Produtos Financeiros Salvos](./screenshots/financeiro-produtos-salvos.png)
 
 ---
 
@@ -189,13 +189,10 @@ src/
 │   ├── Products
 │   ├── Finance
 │
-├── routes
-│
-├── services
-│
-├── context
-│
-└── components
+├── routes/
+├── services/
+├── context/
+├── components/
 ```
 
 ---
@@ -214,7 +211,7 @@ Instale as dependências:
 npm install
 ```
 
-Execute:
+Execute o projeto:
 
 ```bash
 npm run dev
@@ -235,7 +232,7 @@ npm run dev
 * [x] Cálculo de Impostos
 * [x] Cálculo de Frete
 * [x] Exportação Excel
-* [x] Gráficos
+* [x] Gráficos Interativos
 * [x] Produtos Financeiros Salvos
 * [x] CRUD Completo
 
